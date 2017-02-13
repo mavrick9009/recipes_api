@@ -1,0 +1,6 @@
+User.new
+Tool.new
+Equipment.new
+reload!
+Recipe.new
+exit
