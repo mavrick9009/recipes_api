@@ -12,7 +12,7 @@ module API
     # end
 
     helpers Devise::Controllers::SignInOut
-    #helpers AuthenticationHelper
+    helpers AuthenticationHelper
 
     helpers do
       def logger

@@ -13,6 +13,8 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 gem 'devise'
+gem 'devise-async'
+gem 'devise_invitable'
 gem 'pg'
 gem 'email_validator'
 # gem 'devise-async'
@@ -29,12 +31,16 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'grape'
 gem 'grape-active_model_serializers'
+gem 'grape_on_rails_routes'
 gem 'grape-cancan'
 gem 'grape-swagger'
+gem 'rack-cors', :require => 'rack/cors'
 gem 'cancancan', '~> 1.13'
 gem 'active_model_serializers'
 gem 'paperclip'
 gem 'jwt'
+
+gem 'simple_token_authentication', '~> 1.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

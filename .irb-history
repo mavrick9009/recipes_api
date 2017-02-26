@@ -1,6 +1,42 @@
 User.new
 Tool.new
 Equipment.new
-reload!
 Recipe.new
+User.all
+Recipes.all
+Recipe.all
+API.routes.each do |route|
+      puts route
+    end
+Recipe.first
+rec = Recipe.first
+rec.media = File.open("#{Rails.root}/Coconut-Oil-Brownies-Square.jpg")
+rec.image = File.open("#{Rails.root}/Coconut-Oil-Brownies-Square.jpg")
+rec.update(image:file)
+Step.create(name: "Step 1", description: "Mix everything in a bowl"
+file = File.open("#{Rails.root}/brownies_mix.jpg")
+Step.create(name: "Step 1", description: "Mix everything in a bowl", recipe: recipe, image: file)
+Step.create!(name: "Step 1", description: "Mix everything in a bowl", recipe: recipe, image: file)
+Step.create!(name: "Step 1", description: "Mix everything in a bowl", recipe: recipe, image: file, position: 1)
+file = File.open("#{Rails.root}/brownies_pan.jpg")
+Step.create!(name: "Step 2", description: "Pour into a greased pan.", recipe: recipe, image: file, position: 2)
+file = File.open("#{Rails.root}/brownies_oven.jpg")
+Step.create!(name: "Step 3", description: "place in preheated oven", recipe: recipe, image: file, position: 3)
+file = File.open("#{Rails.root}/Coconut-Oil-Brownies-Square.jpg")
+Step.create!(name: "Step 4", description: "Remove from oven and plate", recipe: recipe, image: file, position: 4)
+recipe = Recipe.first
+recipe.steps
+recipe.steps.count
+User.create(email:"markavanarsdale@gmail.com", password:"password", password_confirmation: "password")
+User.create(email:"markavanarsdale@gmail.com", password:"password", password_confirmation: "password", first_name:"mark", last_name:"van")
+User.create!(email:"markavanarsdale@gmail.com", password:"password", password_confirmation: "password", first_name:"mark", last_name:"van")
+User.create!(email:"markavanarsdale@gmail.com", password:"password", password_confirmation: "password", first_name:"mark", last_name:"van", type: "SuperAdmin")
+User.create!(email:"markavanarsdale@gmail.com", password:"password", password_confirmation: "password", first_name:"mark", last_name:"van", type: "SuperUser")
+User.create!(email:"markavanarsdale+2@gmail.com", password:"password", password_confirmation: "password", first_name:"mark", last_name:"van", type: "SuperUser")
+relaod!
+User.first.restore_authentication_token!
+reload
+reload!
+User.first.save
+User.first
 exit

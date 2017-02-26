@@ -81,3 +81,57 @@ rails s
 exit
 rails s
 exit
+rake db:create
+bundle install
+sudo bundle install
+sudo gem install rake -v '12.0.0'
+sudo bundle install
+bundle install
+gem install rake -v '12.0.0'
+rvmsudo gem install rake -v '12.0.0'
+bundle install
+rvmsudo gem install i18n -v '0.7.0'
+bundle install
+rvmsudo bundle install
+rake db:create
+rake db:migrate
+rails c
+rake grape:routes
+rails c
+gem 'grape_on_rails_routes'
+bundle install
+rvmsudo bundle install
+rake grape:routes
+rake grape:routes
+exit
+rails s
+exit
+rails c
+exit
+rails s
+sudo pkill -KILL -f rails
+rails s
+rails s
+rails s
+rails s
+rails s
+rails s
+rails s
+rails s
+rails s
+rails s
+rails s
+rails s
+sudo pkill -KILL -f rails
+sudo pkill -KILL -f rails
+rails s
+sudo pkill -KILL -f rails
+rails s
+sudo nano /home/vagrant/tmp/pids/server.pid
+rails s
+sudo pkill -KILL -f rails
+exit
+exit
+rails s
+rails s
+exit

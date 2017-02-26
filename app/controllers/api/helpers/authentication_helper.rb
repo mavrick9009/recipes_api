@@ -2,7 +2,7 @@ module AuthenticationHelper
   AUTHCOOKIE = :authentication_payload
 
   def sign_in(user)
-    user.restore_authentication_token!
+    user.generate_new_token
 
     # NOTE: We take a couple of measures here to improve
     # the security of storing the user's authentication token
@@ -33,9 +33,9 @@ module AuthenticationHelper
   end
 
   def authenticate!
-    auth_cookie = cookies[AUTHCOOKIE]
+    auth_token = headers["Authorization"]
 
-    if auth_cookie && (auth_payload = JSONWebTokenService.decode(auth_cookie))
+    if auth_token && (auth_payload = JSONWebTokenService.decode(auth_token))
       data = auth_payload[0]
       user = User.find_by(authentication_token: data["token"], email: data["email"])
 

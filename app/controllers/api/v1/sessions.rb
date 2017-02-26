@@ -3,21 +3,15 @@ module API
     class Sessions < Grape::API
       resource :sessions do
 
-        get do
-          status :ok
-           {msg: "yay"}
-        end
         desc "Sign in user."
         params do
-          requires :session, type: Hash do
-            requires :email, desc: "User's email address", type: String
-            requires :password, desc: "User's password", type: String
-          end
+          requires :email, desc: "User's email address", type: String
+          requires :password, desc: "User's password", type: String
         end
         post "/" do
-          user = User.find_by(email: params[:session][:email])
+          user = User.find_by(email: params[:email])
 
-          if user && user.valid_password?(params[:session][:password])
+          if user && user.valid_password?(params[:password])
             status :created
             sign_in(user)
             CurrentUserSerializer.new(user)
@@ -29,7 +23,7 @@ module API
 
         desc "Validate the session."
         get "/validate" do
-          authenticate!
+          # authenticate!
           CurrentUserSerializer.new(current_user)
         end
 
@@ -37,7 +31,7 @@ module API
         delete "/" do
           authenticate!
           sign_out(current_user)
-          status :no_content
+          status :ok
         end
       end
     end

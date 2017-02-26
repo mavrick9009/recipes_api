@@ -1,4 +1,4 @@
-require_relative 'boot'
+require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
@@ -12,5 +12,17 @@ module Api
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.time_zone = 'Eastern Time (US & Canada)'
+
+
+
+    config.autoload_paths << Rails.root.join('app', 'controllers', 'api', 'helpers')
+    config.autoload_paths << Rails.root.join('app', 'models', 'users')
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :delete, :put, :options]
+      end
+    end
   end
 end
