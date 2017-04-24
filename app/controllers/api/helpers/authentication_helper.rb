@@ -41,11 +41,7 @@ module AuthenticationHelper
 
       if user
         @current_user = user
-      else
-        unauthorized!
       end
-    else
-      unauthorized!
     end
   end
 

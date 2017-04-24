@@ -12,6 +12,8 @@ class Ability
       can [:read], Recipe
       can [:edit, :update], Recipe, :user_id => user.id
     else
+
+      can [:get,:read], Recipe
     end
   end
 end

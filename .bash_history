@@ -135,3 +135,35 @@ exit
 rails s
 rails s
 exit
+rails c
+rails c
+rails c
+rails c
+rails c
+rails c
+rvmsudo bundle install
+rails c
+rvmsudo bundle install
+rvmsudo bundle install
+rails c
+rvmsudo bundle install
+rails c
+rails s
+rails s
+rails s
+rails s
+sudo pkill -KILL -f rails
+rails s
+sudo pkill -KILL -f rails
+sudo pkill -KILL -f rails
+rails s
+  def current_user
+lsof -wni tcp:3000
+kill -9 2630
+lsof -wni tcp:3000
+rails s
+rails s
+rails s
+rails s
+rails s
+exit
