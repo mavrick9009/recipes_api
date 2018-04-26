@@ -12,4 +12,5 @@ class Recipe < ActiveRecord::Base
   has_attached_file :image
   validates_attachment_content_type :image, content_type: [/\Aimage/, /video/]
   validates_attachment_file_name :image, matches: [/png\Z/,/gif\Z/, /jpe?g\Z/, /webm\Z/, /mp3\Z/, /mp4\Z/]
+
 end
